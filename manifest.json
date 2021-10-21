@@ -1,0 +1,22 @@
+{
+  "name": "Major Memory Trainer",
+  "short_name": "Memory Trainer",
+  "description": "An app to practice the Major Memory System in a fun and interactive way.",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f2d38b",
+  "background_color": "#874c62",
+  "start_url": "index.html",
+  "orientation": "landscape",
+  "display": "fullscreen"
+}

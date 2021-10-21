@@ -1,0 +1,405 @@
+:root {
+  --white: white;
+  --black: black;
+  --clean: #47d2c8;
+  --butter: #f2d38b;
+  --salmon: #c98474;
+  --eggplant: #874c62;
+}
+* {
+  user-select: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+#Page {
+  background-color: var(--eggplant);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+#Box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#ConvertorBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+#ListBox {
+  background: var(--salmon);
+  height: 100vh;
+}
+#Title {
+  color: var(--white);
+  font-size: 2rem;
+}
+#SubTitle,
+.SubTitle {
+  color: var(--butter);
+  font-size: 1.3rem;
+}
+.SubTitle {
+  padding-bottom: 0.3rem;
+}
+#TextBox {
+  height: 15vh;
+}
+p {
+  width: 60vw;
+  text-align: center;
+  color: var(--butter);
+}
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  background-color: var(--eggplant);
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+}
+#controls button,
+button {
+  color: var(--white);
+  border: 2px solid var(--butter);
+  background-color: var(--eggplant);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+}
+#controls button,
+button {
+  margin: 0 !important;
+  min-width: 10vw;
+}
+#controls button:hover,
+button:hover {
+  background-color: var(--salmon);
+  color: var(--white);
+}
+table {
+  width: 60vw;
+  border-collapse: collapse;
+  background: var(--salmon);
+  border: 1px solid var(--butter);
+}
+#digits,
+#sound {
+  padding: 0.5rem;
+  color: var(--white);
+}
+#digits {
+  width: 10vw;
+}
+#sound {
+  width: 50vw;
+}
+td,
+tr,
+th {
+  text-align: center;
+  color: var(--white);
+  border: 1px solid var(--butter);
+}
+#header {
+  color: var(--white);
+  background-color: var(--eggplant);
+  z-index: 10;
+  padding: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+#headerBox {
+  border: 2px solid var(--butter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: var(--salmon);
+  font-size: 2rem;
+  width: 50vw;
+  height: 10vh;
+}
+#x {
+  font-size: 2rem;
+  position: fixed;
+  right: 0;
+  padding-right: 1rem;
+}
+#container {
+  position: relative;
+  background-color: var(--salmon);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#imageBox {
+  aspect-ratio: 1/1;
+  width: 20vw;
+  height: auto;
+}
+#numImages {
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#numImages img {
+  aspect-ratio: 1/1;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+}
+#numCheck {
+  font-size: 2rem;
+  color: var(--white);
+}
+#sounds {
+  background-color: var(--salmon);
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 100vw;
+  flex-flow: column nowrap;
+}
+.slow {
+  animation-duration: 2s;
+}
+.medium {
+  animation-duration: 1.5s;
+}
+.fast {
+  animation-duration: 1s;
+}
+#sounds div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clean);
+  color: var(--salmon);
+  font-weight: bold;
+  font-size: 0;
+  padding: 0;
+  margin-bottom: 0;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  animation-name: grow;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes grow {
+  from {
+    font-size: 0rem;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  to {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin-bottom: 5px;
+  }
+}
+#sounds div {
+  display: flex;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clean);
+  color: var(--salmon);
+  font-weight: bold;
+  width: 0px;
+  height: 0px;
+  padding: 1.5rem;
+}
+.hide {
+  display: none;
+}
+#wrongBox {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#wrong {
+  background-color: var(--eggplant);
+  box-shadow: 1px 1px 7px black;
+  padding: 1.5rem;
+  font-size: 3rem;
+  color: var(--white);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.card {
+  font-size: 1rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  width: 90vw;
+  max-width: 1020px;
+  height: auto;
+}
+.callSign,
+.imageContainer {
+  overflow: hidden;
+  display: inline-block;
+  width: 49.6%;
+}
+.callSign {
+  color: white;
+  padding: 1rem 0;
+  background-color: #874c62;
+  text-align: center;
+  font-size: 2rem;
+}
+.imageContainer {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer img {
+  aspect-ratio: 1/1;
+  width: 50%;
+  height: auto;
+}
+.description {
+  text-align: left;
+  height: auto;
+  color: white;
+  background-color: #f2d38b;
+  padding: 1rem 10px;
+}
+#list {
+  position: relative;
+  display: flex;
+  margin-top: 10vh;
+  background: var(--salmon);
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+}
+#images {
+  background-color: var(--salmon);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  align-content: center;
+}
+#images .stickers {
+  aspect-ratio: 1/1;
+  padding: 5px;
+  width: 17%;
+  height: auto;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.tableBtn {
+  padding: 0.1rem !important;
+}
+
+@media only screen and (max-height: 500px) {
+  #controls button,
+  button {
+    font-size: 1rem !important;
+  }
+  #searchBar,
+  #headerText,
+  #Heading,
+  #Title {
+    font-size: 1.5rem !important;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-height: 400px) {
+  #SubTitle,
+  .SubTitle {
+    font-size: 1.2rem !important;
+  }
+  #images .stickers {
+    padding: 13px !important;
+  }
+  #controls button,
+  button,
+  #numbers {
+    font-size: 1rem !important;
+    padding: 0.1rem !important;
+  }
+  #TextBox {
+    display: none !important;
+  }
+  #searchBar,
+  #headerText,
+  #Heading,
+  #Title {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media only screen and (max-height: 300px) {
+  .tableTitle {
+    display: none !important;
+  }
+  #SubTitle,
+  .SubTitle {
+    font-size: 1rem !important;
+  }
+  #controls button,
+  button,
+  #numbers {
+    font-size: 1rem !important;
+    padding: 0 !important;
+  }
+  #TextBox {
+    display: none !important;
+  }
+  #searchBar,
+  #headerText,
+  #Heading,
+  #Title {
+    font-size: 1.2rem !important;
+  }
+  #rainGame {
+    display: none !important;
+  }
+}
