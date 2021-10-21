@@ -1,4 +1,4 @@
-import { elAdd, addClick, importPage } from "../scripts/helpers.js";
+import { elAdd, addClick, importPage } from "./scripts/helpers.js";
 
 const landingHTML = `<div id="Page">
     <div id="Box">
