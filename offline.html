@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Major Memory</title>
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+    <link rel="manifest" href="manifest.json" />
+    <meta
+      name="description"
+      content="An app to learn the Major Memory System in a fun interactive way."
+    />
+    <link rel="stylesheet" href="styles.css" defer />
+    <script type="module" src="App.js"></script>
+    <style>
+        #AppContent {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background:#874c62;
+            color:#f2d38b;
+            height:100vh;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="AppContent"><h1>You are Offline!!!</h1></div>
+  </body>
+</html>
