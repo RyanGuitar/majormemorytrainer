@@ -1,12 +1,1 @@
-import { elAdd, addClick, importPage } from "./scripts/helpers.js";
-
-const landingHTML = `<div id="Page">
-    <div id="Box">
-      <div id="Title">Major Memory Trainer</div>
-      <br>
-      <div id="SubTitle">click to start learning</div>
-    </div>
-  </div>`;
-
-elAdd("AppContent", landingHTML);
-addClick("Box", () => importPage("menu"));
+import{elAdd,addClick,importPage}from"./scripts/helpers.js";const landingHTML='<div id="Page">\n    <div id="Box">\n      <div id="Title">Major Memory Trainer</div>\n      <br>\n      <div id="SubTitle">click to start learning</div>\n    </div>\n  </div>';elAdd("AppContent",landingHTML),addClick("Box",()=>importPage("menu"));
